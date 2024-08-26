@@ -1,8 +1,8 @@
 <?php
 
-namespace Packages\Domain\Order\Entity;
+namespace Packages\Domain\Article\Entity;
 
-class Articles
+class Article
 {
     private ID $id;
     private Title $title;

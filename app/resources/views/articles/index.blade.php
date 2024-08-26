@@ -6,6 +6,8 @@
     <title>PhotoLocation</title>
 </head>
 <body>
-    articles
+<h1>記事一覧</h1>
+
+
 </body>
 </html>
