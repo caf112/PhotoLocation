@@ -10,10 +10,10 @@ class Articles
     private Body $body;
 
     private function __construct(
-        int $id,
-        string $title,
-        string $photo,
-        string $body
+        ID $id,
+        Title $title,
+        Photo $photo,
+        Body $body
     ){
         $this->id = $id;
         $this->title = $title;
@@ -21,23 +21,32 @@ class Articles
         $this->body = $body;
     }
 
-    public function getID(): int
+    public function getID(): ID
     {
         return $this->id;
     }
 
-    public function getTitle(): string
+    public function getTitle(): Title
     {
         return $this->title;
     }
 
-    public function getPhoto(): string
+    public function getPhoto(): Photo
     {
         return $this->photo;
     }
 
-    public function getBody(): string
+    public function getBody(): Body
     {
         return $this->body;
+    }
+
+    public static function create(
+        ID $id,
+        Title $title,
+        Photo $photo,
+        Body $body
+    ){
+        return new self($id, $title, $photo, $body);
     }
 }
