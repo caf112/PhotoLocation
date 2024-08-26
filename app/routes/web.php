@@ -6,4 +6,4 @@ Route::get('/', function () {
     return view('articles/index');
 });
 
-Route::resource('/articles', PostArticlesContrroler::class);
+Route::resource('articles', PostArticlesController::class);

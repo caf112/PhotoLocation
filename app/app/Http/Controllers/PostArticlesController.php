@@ -10,7 +10,7 @@ use Packages\Domain\Article\ValueObject\Title;
 use Packages\Domain\Article\ValueObject\Photo;
 use Packages\Domain\Article\ValueObject\Body;
 
-class PostArticlesControler extends Controller
+class PostArticllesControler extends Controller
 {
 
     public function __construct(GetArticlesService $articlesService)
@@ -22,6 +22,7 @@ class PostArticlesControler extends Controller
     {
         $articles = $this->articlesService->execute();
 
+        dd($articles);
         return view('articles.index', compact('articles'));
     }
 }
