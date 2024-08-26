@@ -7,7 +7,10 @@
 </head>
 <body>
 <h1>記事一覧</h1>
-
-
+    @foreach($articles as $article)
+        <li>
+            {{ $article->title->value() }}<br>
+        </li>
+    @endforeach
 </body>
 </html>
