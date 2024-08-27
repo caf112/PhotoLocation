@@ -9,14 +9,14 @@ use Packages\Repository\Article\ArticleRepositoryInterface;
 
 class GetArticlesService
 {
-    private ArticleRepositoryInterface $articleInterface;
+    private ArticleRepositoryInterface $articleRepository;
 
-    public function __construct(ArticleReopsitoryInterface $articleInterface)
+    public function __construct(ArticleRepositoryInterface $articleRepository)
     {
-        $this->articleInterface = $articleInterface;
+        $this->articleRepository = $articleRepository;
     }
 
-    public function execute(): Colelction
+    public function execute(): Collection
     {
         return $this->articleRepository->selectArticles();
     }
